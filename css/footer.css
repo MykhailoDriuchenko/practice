@@ -1,3 +1,4 @@
+
 footer {
   background-color: #333;
   color: #fff;
@@ -94,5 +95,28 @@ footer {
   
   .social-links li {
       margin: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-top {
+    padding: 20px 0;
+  }
+  
+  .footer-links li {
+    margin: 0 8px;
+  }
+  
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+  
+  .social-links svg {
+    width: 16px;
+    height: 16px;
   }
 }

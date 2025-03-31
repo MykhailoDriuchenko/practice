@@ -1,3 +1,4 @@
+
 /* Header Styles */
 header {
   background-color: transparent;
@@ -200,29 +201,105 @@ header {
 
 @media (max-width: 768px) {
   .header-top {
-      flex-direction: column;
+    flex-direction: column;
   }
   
   .logo {
-      position: static;
-      margin-bottom: 15px;
+    position: static;
+    margin: 0 auto 15px;
+    left: auto;
   }
   
   .search-container {
-      width: 100%;
-      margin-bottom: 15px;
+    width: 90%;
+    margin: 0 auto 15px;
+  }
+  
+  .main-nav {
+    width: 100%;
+    margin-left: 0;
   }
   
   .main-nav ul {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-nav li {
+    margin-bottom: 8px;
+  }
+  
+  .hero {
+    height: 50vh;
+    margin-top: 0;
   }
   
   .hero h1 {
-      font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
   
   .icon-row {
-      gap: 20px;
+    gap: 15px;
+  }
+  
+  .icon-item {
+    width: 90px;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .icon-circle img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 0;
+  }
+  
+  .logo-img {
+    max-height: 45px;
+  }
+  
+  .main-nav a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .read-more-btn {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+  
+  .icon-row {
+    gap: 10px;
+  }
+  
+  .icon-item {
+    width: 80px;
+  }
+  
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon-circle img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .icon-item p {
+    font-size: 0.75rem;
   }
 }

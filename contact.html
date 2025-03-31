@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agridera Seeds and Agriculture</title>
+    <title>Contact Us - Agridera Seeds and Agriculture</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/middle.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/tomatoall.css">
 </head>
 <body>
@@ -33,146 +33,116 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">Company Profile</a></li>
                     <li><a href="tomatoall.html">Products</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">R & D</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Agridera Seeds and Agriculture Ltd</h1>
-            <button class="read-more-btn">READ MORE</button>
-        </div>
+    <section class="contact-hero">
+        <!-- Hero background image is set in CSS -->
     </section>
 
-    <!-- Products Icons Section -->
-    <section class="products-icons">
+    <!-- Contact Form Section -->
+    <section class="contact-section">
         <div class="container">
-            <div class="icon-row">
-                <div class="icon-item">
-                    <div class="icon-circle">
-                        <img src="images/Vector (3).png" alt="Wheat">
-                    </div>
-                    <p>Wheat</p>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-circle">
-                        <img src="images/Group 3.png" alt="Confection Watermelon">
-                    </div>
-                    <p>Confection Watermelon</p>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-circle">
-                        <img src="images/Vector (2).png" alt="Clover">
-                    </div>
-                    <p>Clover</p>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-circle">
-                        <img src="images/Vector (1).png" alt="Confection Sunflower">
-                    </div>
-                    <p>Confection Sunflower</p>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-circle">
-                    <a href="tomatoall.html">
-                        <img src="images/Vector.png" alt="Tomato">
-                    </a>
-                    </div>
-                    <a href="tomatoall.html"><p>Tomato</p></a>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-circle">
-                        <img src="images/Component 1.png" alt="Eggplant F-1">
-                    </div>
-                    <p>Eggplant P/O</p>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-circle">
-                        <img src="images/Group 5.png" alt="Ornamental Sunflower">
-                    </div>
-                    <p>Ornamental Sunflower</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section class="vision-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 content-block">
-                    <h2>Vision</h2>
-                    <div class="divider"></div>
-                    <p>We believe in long-term growth with an emphasis on the potential of emerging markets. We also support the global need of feeding the growing population.</p>
-                </div>
-                <div class="col-md-6 image-block">
-                    <img src="images/image 3.png" alt="Vision Image" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="mission-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 image-block">
-                    <div class="image-with-play">
-                        <img src="images/image 2.png" alt="Mission Image" class="img-fluid rounded">
-                        <div class="play-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
-                            </svg>
+            <h1 class="contact-title">Contact us</h1>
+            <div class="contact-divider"></div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label required">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType" class="form-label">You are a</label>
+                            <select id="userType" class="form-control">
+                                <option selected>seed producer</option>
+                                <option>distributor</option>
+                                <option>farmer</option>
+                                <option>other</option>
+                            </select>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 content-block">
-                    <h2>Mission</h2>
-                    <div class="divider"></div>
-                    <p>Breeding and marketing seeds for advanced field crops and vegetable varieties that provide an added value to all supply chain partners.</p>
-                </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="companyName" class="form-label">Company Name</label>
+                            <input type="text" id="companyName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="otherSpecify" class="form-label">If other, please specify</label>
+                            <input type="text" id="otherSpecify" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="position" class="form-label">Position</label>
+                            <input type="text" id="position" class="form-control">
+                        </div>
+                        <div class="form-group-full">
+                            <label for="interested" class="form-label">You are interested in</label>
+                            <textarea id="interested" class="form-control form-textarea"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" id="city" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" id="country" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telephone" class="form-label">Telephone</label>
+                            <input type="tel" id="telephone" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="form-label required">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Please type this code</label>
+                            <div class="captcha-group">
+                                <span class="captcha-text">7cj3</span>
+                                <input type="text" class="form-control captcha-input" required>
+                            </div>
+                            <button type="submit" class="send-button">Send Message</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Activities Section -->
-    <section class="activities-section">
-        <div class="container text-center">
-            <h2>Agridera's main activities</h2>
-            <div class="divider mx-auto"></div>
-            
-            <div class="row activities-cards">
-                <div class="col-md-4">
-                    <div class="activity-card">
-                        <img src="images/image 4.png" alt="Open field crop seeds" class="card-img">
-                        <h3>Open field crop seeds</h3>
-                        <p>Wheat, cotton, legumes, hybrid confection sunflower</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="activity-card">
-                        <img src="images/image 5.png" alt="Vegetable seeds" class="card-img">
-                        <h3>Vegetable seeds</h3>
-                        <p>Hybrid open field tomatoes, eggplant, onion, etc.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="activity-card">
-                        <img src="images/3 1.png" alt="Ornamental seeds" class="card-img">
-                        <h3>Ornamental seeds</h3>
-                        <p>Hybrid cut sunflowers, hybrid patio tomatoes, balcony plants, etc.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Address Section -->
+    <section class="address-section">
+        <div class="container">
+            <h2 class="address-title">Our Address</h2>
+            <p class="address-info">AGRIDERA Seeds & Agriculture Ltd.</p>
+            <p class="address-info">P.O Box 103,</p>
+            <p class="address-info">Gedera 70750, Israel.</p>
+            <p class="address-info">Telephone: <a href="tel:+97285944922" class="address-phone">+972 8 944 9222</a></p>
         </div>
     </section>
 
@@ -225,6 +195,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
