@@ -7,11 +7,27 @@ var app = new Vue ({
             {id:4,title:"Yen Ben", short_text:'Small, deep yellow, with juicy flesh', image:'Yen Ben.jpg', desc:"An Australian variety known for its small size, smooth yellow skin, and high juice yield. It is particularly popular for making lemonade and cocktails due to its intense flavor."},
             {id:5,title:"Yuzu", short_text:'Bumpy, fragrant, with a spicy citrus flavor', image:'Uzu.jpg', desc:"A unique Japanese citrus fruit with a bumpy, thick rind and a highly aromatic scent. Its flavor is a mix of lemon, lime, and grapefruit, often used in sauces, dressings, and desserts."}],
         product: [],
-        btnVisible: 0
+        btnVisible: 0,
+        cart: [],
+        contactFields: {
+            name: '',
+            userType: 'seed producer',
+            companyName: '',
+            otherSpecify: '',
+            position: '',
+            interested: '',
+            city: '',
+            country: '',
+            telephone: '',
+            email: '',
+            captcha: ''
+        },
+        orderSubmitted: false
     },    
     mounted:function(){
         this.getProduct();
         this.checkInCart();
+        this.getCart();
     },
     methods:{
         getProduct:function(){
@@ -41,6 +57,38 @@ var app = new Vue ({
         },
         checkInCart:function(){
             if(this.product && this.product.id && window.localStorage.getItem('cart') && window.localStorage.getItem('cart').split(',').indexOf(String(this.product.id))!=-1) this.btnVisible=1;
+        },
+        getCart:function(){
+            this.cart = [];
+            if(window.localStorage.getItem('cart')){
+                var cartIds = window.localStorage.getItem('cart').split(',');
+                if(cartIds.length>0){
+                    for(var j=0; j<cartIds.length; j++){
+                        for(var i=0; i<this.products.length; i++){
+                            if(String(this.products[i].id) === cartIds[j]){
+                                this.cart.push(this.products[i]);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        removeFromCart:function(id){
+            if(window.localStorage.getItem('cart')){
+                var cart = window.localStorage.getItem('cart').split(',');
+                var index = cart.indexOf(String(id));
+                if(index > -1){
+                    cart.splice(index, 1);
+                    window.localStorage.setItem('cart', cart.join());
+                    this.getCart();
+                }
+            }
+        },
+        makeOrder:function(){
+            this.orderSubmitted = true;
+            window.localStorage.removeItem('cart');
+            this.cart = [];
         }
     }
 });
