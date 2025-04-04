@@ -2,7 +2,7 @@
 
 /* Tomato Hero Section */
 .tomato-hero {
-    background-image: url("lemons.jpg");
+    background-image: url('lemons.jpg');
     background-size: cover;
     background-position: center;
     height: 50vh;
