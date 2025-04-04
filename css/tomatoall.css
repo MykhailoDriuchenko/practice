@@ -1,9 +1,8 @@
-
 /* Tomato Products Page Styles */
 
 /* Tomato Hero Section */
 .tomato-hero {
-    background-image: url('image 7.png');
+    background-image: url('lemons.jpg');
     background-size: cover;
     background-position: center;
     height: 50vh;
@@ -118,46 +117,76 @@
     margin-bottom: 40px;
 }
 
-.tomato-gallery {
+/* New Tomato Gallery Styling Based on Example */
+.tomatosList {
     margin-top: 30px;
 }
 
-.tomato-item {
+.tomatoItem {
     margin-bottom: 30px;
-    background-color: #fff;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.tomato-item:hover {
-    transform: translateY(-8px);
-}
-
-.tomato-item a {
+.tomatoItem a {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-.tomato-item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #eee;
+.tomatoImg {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.tomato-item h4 {
-    padding: 15px 15px 5px;
-    font-size: 1.1rem;
+.tomatoImg img {
+    max-width: 100%;
+    max-height: 230px;
+    object-fit: contain;
+}
+
+.tomatoInfo {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 100px;
+}
+
+.tomatoInfo b {
     color: #4a8522;
-    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.tomato-item p {
-    padding: 0 15px 15px;
-    font-size: 0.9rem;
-    color: #777;
+/* Cart Buttons Styling */
+.cart-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.pdf {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a8522;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.pdf:hover {
+    background-color: #3a6a1a;
+    color: white;
 }
 
 /* Active navigation link */
@@ -202,6 +231,14 @@
         font-size: 1.5rem;
         padding: 0 15px;
     }
+    
+    .tomatoImg {
+        height: 200px;
+    }
+    
+    .tomatoInfo {
+        min-height: 80px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -226,13 +263,12 @@
         font-size: 0.85rem;
     }
     
-    .tomato-item h4 {
-        font-size: 1rem;
-        padding: 12px 12px 5px;
+    .tomatoImg {
+        height: 180px;
     }
     
-    .tomato-item p {
-        font-size: 0.85rem;
-        padding: 0 12px 12px;
+    .tomatoInfo b {
+        font-size: 18px !important;
+        line-height: 24px !important;
     }
 }
